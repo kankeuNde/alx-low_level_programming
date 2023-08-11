@@ -1,8 +1,10 @@
 #include <stdio.h>
 
 /**
- *print a message using puts function
-*/
+ * main - entry point of the code
+ *
+ * Return - 0 Successful
+ */
 int main(void)
 {
 	char msg[] = "Programming is like building a multilingual puzzle";
