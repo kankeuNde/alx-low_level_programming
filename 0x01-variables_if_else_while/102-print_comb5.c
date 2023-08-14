@@ -10,18 +10,18 @@ int main(void)
 	int i, j, k, l;
 
 	for (i = '0'; i <= '9'; i++)
-		for (j = '0'; j <= '9'; j++)
-			for (k = '0'; k <= '9'; k++)
-				for (l = k+1; l <= '9'; l++)
+		for (j = i; j <= '9'; j++)
+			for (k = j; k <= '9'; k++)
+				for (l = k; l <= '9'; l++)
 				{
-					if (true)
+					if (i != j && j != k)
 					{
 						putchar(i);
-						putchar(i);
-						putchar(' ');
-						putchar(i);
 						putchar(j);
-						if (!(i == '8' && j == '9'))
+						putchar(' ');
+						putchar(k);
+						putchar(l);
+						if (!(i == '9' && j == '8' && k == '9' && l == '9'))
 						{
 							putchar(',');
 							putchar(' ');
