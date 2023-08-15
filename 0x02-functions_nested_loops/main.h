@@ -1,2 +1,3 @@
 #include <stdio.h>
-#include "1-alphabet"
+
+void print_alphabet(void);
