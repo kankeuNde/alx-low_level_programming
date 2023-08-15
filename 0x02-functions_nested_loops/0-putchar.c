@@ -7,6 +7,12 @@
  */
 int main(void)
 {
-	printf("_putchar\n");
+	char msg[] = {'_','p','u','t','c','h','a','r','\n'};
+	int i;
+
+	for (i = 0; i < 9; i++)
+	{
+		putchar(msg[i]);
+	}
 	return (0);
 }
