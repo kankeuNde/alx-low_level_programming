@@ -19,7 +19,8 @@ int print_sign(int c)
 	}
 	else
 	{
-		putchar('-1');
+		putchar('-');
+		putchar('1');
 		return (-1);
 	}
 }
