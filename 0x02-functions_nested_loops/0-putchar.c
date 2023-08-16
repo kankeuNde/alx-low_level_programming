@@ -24,10 +24,13 @@ int main(void)
  */
 void _putchar(char msg[])
 {
-	int len = sizeof(msg) / sizeof(msg[0]);
 	int i;
 
-	for (i = 0; i < len; i++)
+	i = 0;
+	while(msg[i] != '\0')
+	{
 		putchar(msg[i]);
+		i++;
+	}
 	putchar('\n');
 }
