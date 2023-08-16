@@ -2,7 +2,7 @@
 
 /**
  * _islower(int c) - checks if c is lowercase or uppercase
- *
+ * @parameter: c to be displayed
  * Return: 0 if c is lowercase, 1 otherwise
  */
 int _islower(int c)
