@@ -16,21 +16,3 @@ int main(void)
 	}
 	return (0);
 }
-
-/**
- * _putchar - print an array of char
- *
- * Return: void 
- */
-void _putchar(char msg[])
-{
-	int i;
-
-	i = 0;
-	while(msg[i] != '\0')
-	{
-		putchar(msg[i]);
-		i++;
-	}
-	putchar('\n');
-}
