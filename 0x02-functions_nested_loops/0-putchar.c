@@ -16,3 +16,18 @@ int main(void)
 	}
 	return (0);
 }
+
+/**
+ * _putchar - print an array of char
+ *
+ * Return: void 
+ */
+void _putchar(char msg[])
+{
+	int len = sizeof(msg) / sizeof(msg[0]);
+	int i;
+
+	for (i = 0; i < len; i++)
+		putchar(msg[i]);
+	putchar('\n');
+}
