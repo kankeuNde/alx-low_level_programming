@@ -14,7 +14,19 @@ int main(void)
 	r = _islower('o');
 	_putchar(r + '0');
 	r = _islower(108);
-	_putchar(r + '0');
-	_putchar('\n');
+	_putchar
 	return (0);
+}
+
+void _putchar(char str[])
+{
+	int i;
+
+	i = 0;
+
+	while (str[i] != '\0')
+	{
+		putchar(str[i]);
+	}
+	putchar('\n');
 }
