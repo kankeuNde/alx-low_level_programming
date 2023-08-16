@@ -1,5 +1,6 @@
 #include "main.h"
 
+void _putchar(int);
 /**
  * main - check the code
  *
