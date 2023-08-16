@@ -18,15 +18,7 @@ int main(void)
 	return (0);
 }
 
-void _putchar(char str[])
+void _putchar(int n)
 {
-	int i;
-
-	i = 0;
-
-	while (str[i] != '\0')
-	{
-		putchar(str[i]);
-	}
-	putchar('\n');
+	putchar(n);
 }
