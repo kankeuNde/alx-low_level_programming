@@ -1,14 +1,14 @@
 #include "main.h"
 
 /**
- * jack_baeur - print the 24 hours
+ * jack_bauer - print the 24 hours
  *
  * Return: void
  */
 void jack_bauer(void)
 {
 	int hour, minute;
-	
+
 	for (hour = 0; hour <= 13; hour++)
 	{
 		for (minute = 0; minute <= 59; minute++)
