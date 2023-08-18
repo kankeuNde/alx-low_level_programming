@@ -3,3 +3,4 @@
 2-function that multiply two integers
 void print_numbers(void);
 4-Function that prints the numbers from 0 to 9, followed by a new line
+5 - Function that prints from 0 to 14 followed by a new line
