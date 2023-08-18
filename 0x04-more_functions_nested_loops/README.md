@@ -5,3 +5,4 @@ void print_numbers(void);
 4-Function that prints the numbers from 0 to 9, followed by a new line
 5 - Function that prints from 0 to 14 followed by a new line
 6 - function that draws a straight line in the terminal
+7 - function that drws a diagonal line on the terminal
