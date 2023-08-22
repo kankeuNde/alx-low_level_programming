@@ -4,3 +4,5 @@ int _strlen(char *s);
 void _puts(char *str);
 void _putchar(int c);
 void print_rev(char *s);
+void rev_string(char *s);
+void swap_char(char *a, char *b);
