@@ -8,15 +8,16 @@
 void rev_string(char *s)
 {
 	int len;
-	int i, j;
+	int i;
 
 	len = _strlen(s) - 1;
-	char tmp[len];
 
-	for (i = len, j = 0; i >= 0, j <= len; i--, j++)
-		tmp[j] = s[i];
-	s = &tmp;
-	_putchar('\n');
+	while (len > i)
+	{
+		swap_char(s + len, s + i);
+		i++;
+		len--;
+	}
 }
 
 /**
@@ -34,4 +35,19 @@ int _strlen(char *s)
 		i++;
 	}
 	return (i);
+}
+
+/**
+ * swap_char - swap two chars
+ * @a: first char
+ * @b: second char
+ * Return: nothing
+ */
+void swap_char(char *a, char *b)
+{
+	char tmp;
+
+	tmp = *a;
+	*a = *b;
+	*b = tmp;
 }
