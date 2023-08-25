@@ -22,6 +22,9 @@ char *_strncpy(char *dest, char *src, int n)
 		i++;
 	}
 	for (; i < n; i++)
-		*d++ = '\0';
+	{
+		*d = '\0';
+		d++;
+	}
 	return (dest);
 }
