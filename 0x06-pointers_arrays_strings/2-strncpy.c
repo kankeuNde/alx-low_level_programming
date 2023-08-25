@@ -13,7 +13,7 @@ char *_strncpy(char *dest, char *src, int n)
 	char *d = dest;
 	char *s = src;
 	int i = 0;
-	
+
 	while (i < n && *d != '\0')
 	{
 		*d = *s;
