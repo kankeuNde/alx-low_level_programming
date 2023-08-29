@@ -22,7 +22,7 @@ unsigned int _strspn(char *s, char *accept)
 	{
 		for (i = 0; string2[i]; i++)
 		{
-			if (string2[i] == *s)
+			if (string2[i] == *string1)
 			{
 				n++;
 				break;
