@@ -14,19 +14,27 @@ char *str_concat(char *s1, char *s2)
 	int len1, len2, len, i, j;
 	char *str;
 
+	if (s1 == NULL && s2 == NULL)
+		return (NULL);
 	len1 = _strlen(s1);
 	len2 = _strlen(s2);
 	len = len1 + len2 + 1;
 	str = malloc(len * sizeof(char));
 	if (str == NULL)
 		return (NULL);
-	for (i = 0; i < len1; i++)
-		str[i] = s1[i];
-	j = 0;
-	for (i = len1; (i < len - 1) && (j < len2); i++)
+	if (s1 != NULL)
 	{
-		str[i] = s2[j];
-		j++;
+		for (i = 0; i < len1; i++)
+			str[i] = s1[i];
+	}
+	if (s2 != NULL)
+	{
+		j = 0;
+		for (i = len1; (i < len - 1) && (j < len2); i++)
+		{
+			str[i] = s2[j];
+			j++;
+		}
 	}
 	str[len - 1] = '\0';
 	return (str);
