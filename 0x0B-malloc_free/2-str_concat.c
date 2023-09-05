@@ -1,5 +1,4 @@
 #include "main.h"
-#include <stdio.h>
 int _strlen(char *s);
 
 /**
@@ -15,8 +14,6 @@ char *str_concat(char *s1, char *s2)
 	int len1, len2, len, i, j;
 	char *str;
 
-	if (s1 == NULL && s2 == NULL)
-		return (NULL);
 	len1 = _strlen(s1);
 	len2 = _strlen(s2);
 	len = len1 + len2 + 1;
