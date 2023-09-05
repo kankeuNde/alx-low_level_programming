@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 int _strlen(char *s);
 
 /**
@@ -19,6 +20,7 @@ char *str_concat(char *s1, char *s2)
 	len1 = _strlen(s1);
 	len2 = _strlen(s2);
 	len = len1 + len2 + 1;
+
 	str = malloc(len * sizeof(char));
 	if (str == NULL)
 		return (NULL);
@@ -51,6 +53,8 @@ int _strlen(char *s)
 {
 	int i, len;
 
+	if (s == NULL)
+		return (0);
 	len = 0;
 	for (i = 0; s[i] != '\0'; i++)
 		len++;
