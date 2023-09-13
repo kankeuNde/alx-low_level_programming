@@ -1,5 +1,7 @@
+#include <stddef.h>
+#include <stdlib.h>
 #ifndef _FUNCTION_POINTERS_
 #define _FUNCTION_POINTERS_
 void print_name(char *name, void (*f)(char *));
-#include <stdlib.h>
+void array_iterator(int *array, size_t size, void (*action)(int));
 #endif
