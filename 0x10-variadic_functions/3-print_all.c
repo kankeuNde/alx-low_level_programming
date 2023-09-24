@@ -18,7 +18,7 @@ void print_all(const char * const format, ...)
 	va_start(ap, format);
 
 	i = 0;
-	while (format[i] != '\0' && i != len)
+	while (format != NULL && format[i] != '\0' && i != len)
 	{
 		fmt_chr = format[i];
 		if (fmt_chr  == 'c' || fmt_chr == 'i' || fmt_chr == 'f' || fmt_chr == 's')
