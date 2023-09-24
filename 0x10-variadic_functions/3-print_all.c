@@ -21,7 +21,7 @@ void print_all(const char * const format, ...)
 	while (format[i] != '\0' && i != len)
 	{
 		fmt_chr = format[i];
-		if (fmt_chr  == 'c' || fmt_chr == 'i' || fmt_chr == 's' || fmt_chr == 's')
+		if (fmt_chr  == 'c' || fmt_chr == 'i' || fmt_chr == 'f' || fmt_chr == 's')
 		{
 		switch (format[i])
 		{
