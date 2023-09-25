@@ -33,3 +33,22 @@ list_t *add_node_end(list_t **head, const char *str)
 	last->next = tmp_node;
 	return (tmp_node);
 }
+
+/**
+ * _str_len - compute the length of a string
+ * @str: inputed string
+ *
+ * Return: integer size of the string
+ */
+int _str_len(char *str)
+{
+	int n;
+
+	n = 0;
+	while (str != NULL && *str != '\0')
+	{
+		n++;
+		str++;
+	}
+	return (n);
+}
