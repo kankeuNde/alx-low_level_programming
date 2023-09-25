@@ -14,24 +14,28 @@ list_t *add_node_end(list_t **head, const char *str)
 	list_t *tmp_node;
 	list_t *last;
 
-	last = *head;
-	tmp_str = strdup(str);
-	tmp_len = _str_len(tmp_str);
 	tmp_node = malloc(sizeof(list_t));
 	if (tmp_node == NULL)
+	{
+		free(tmp_node);
 		return (NULL);
+	}
+	tmp_str = strdup(str);
+	tmp_len = _str_len(tmp_str);
+
 	tmp_node->str = tmp_str;
 	tmp_node->len = tmp_len;
 	tmp_node->next = NULL;
-	if (last == NULL)
+	if (*head == NULL)
 	{
-		last = tmp_node;
-		return (tmp_node);
+		*head = tmp_node;
+		return (*head);
 	}
+	last = *head;
 	while (last->next != NULL)
 		last = last->next;
 	last->next = tmp_node;
-	return (tmp_node);
+	return (*head);
 }
 
 /**
@@ -42,13 +46,14 @@ list_t *add_node_end(list_t **head, const char *str)
  */
 int _str_len(char *str)
 {
-	int n;
+	int n, i;
 
 	n = 0;
-	while (str != NULL && *str != '\0')
+	i = 0;
+	while (str != NULL && str[i] != '\0')
 	{
 		n++;
-		str++;
+		i++;
 	}
 	return (n);
 }
