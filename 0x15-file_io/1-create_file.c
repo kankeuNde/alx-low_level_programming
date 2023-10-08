@@ -14,8 +14,9 @@ int create_file(const char *filename, char *text_content)
 	buffer_size = 0;
 	if (filename == NULL)
 		return (-1);
-	while (text_content[buffer_size] != '\0')
-		buffer_size++;
+	if (text_content != NULL)
+		while (text_content[buffer_size] != '\0')
+			buffer_size++;
 	fd = open(filename, O_RDWR | O_CREAT | O_TRUNC, 0600);
 	w_flag = write(fd, text_content, buffer_size);
 	if (fd == -1 || w_flag == -1)
