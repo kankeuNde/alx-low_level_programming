@@ -1,5 +1,13 @@
 #include "lists.h"
 
+/**
+ * insert_dnodeint_at_index - insert a position idx
+ * @h: pointer head to the list
+ * @idx: position where to insert
+ * @n: value of the node
+ *
+ * Return: dlistint_t head of the modified list
+ */
 dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
 	dlistint_t *newNode;
@@ -23,7 +31,7 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	}
 	if (temp == NULL)
 		return (NULL);
-	if(temp->next == NULL)
+	if (temp->next == NULL)
 		*h = add_dnodeint_end(h, n);
 	else
 	{
