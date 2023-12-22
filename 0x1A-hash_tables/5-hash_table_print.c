@@ -20,11 +20,11 @@ void hash_table_print(const hash_table_t *ht)
 		node = ht->array[i];
 		while (node != NULL)
 		{
-			if (node->next == NULL)
-				printf("\'%s\': \'%s\'", node->key, node->value);
-			printf("\'%s\': \'%s\', ", node->key, node->value);
+			printf("\'%s\': \'%s\'", node->key, node->value);
 			node = node->next;
+			if (i < (ht->size - 1) || node != NULL)
+				printf(", ");
 		}
 	}
-	printf("}");
+	printf("}\n");
 }
