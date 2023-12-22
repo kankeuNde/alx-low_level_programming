@@ -9,13 +9,16 @@
  */
 char *hash_table_get(const hash_table_t *ht, const char *key)
 {
-	char *value;
+	hash_node_t *node;
 
 	if (ht == NULL || key == NULL)
 		return (NULL);
-	value = ht->array[key_index((const unsigned char *)key, ht->size)]->value;
-	if (value == NULL)
-		return (NULL);
-	else
-		return (value);
+	node = ht->array[key_index((const unsigned char *)key, ht->size)];
+	while (node != NULL)
+	{
+		if (strcmp(node->key, key) == 0)
+			return (node->value);
+		node = node->next;
+	}
+	return (NULL);
 }
